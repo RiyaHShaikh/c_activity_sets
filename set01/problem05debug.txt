@@ -1,0 +1,74 @@
+PS C:\Users\riys\Desktop\c_activity_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\riys\Desktop\c_activity_sets\set01\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem05.c, line 9.
+(gdb) r
+Starting program: C:\Users\riys\Desktop\c_activity_sets\set01/a.exe 
+[New Thread 21332.0x948]
+[New Thread 21332.0x18f4]
+
+Breakpoint 1, main () at problem05.c:9
+9           num1 = input();
+(gdb) s
+input () at problem05.c:19
+19          printf("Enter a number:");
+(gdb) s
+Enter a number:20           scanf("%d",&num);
+(gdb) s
+s
+21          return num;
+(gdb) s
+22      }
+(gdb) s
+main () at problem05.c:10
+10          num2 = input();
+(gdb) s
+input () at problem05.c:19
+19          printf("Enter a number:");
+(gdb) s
+Enter a number:20           scanf("%d",&num);
+(gdb) s
+21          return num;
+(gdb) s
+22      }
+(gdb) s
+main () at problem05.c:11
+11          num3 = input();
+(gdb) s
+input () at problem05.c:19
+19          printf("Enter a number:");
+(gdb) s
+Enter a number:20           scanf("%d",&num);
+(gdb) s
+21          return num;
+(gdb) s
+22      }
+(gdb) s
+main () at problem05.c:12
+12          largest = compare(num1,num2,num3);
+(gdb) s
+compare (a=6422476, b=6422476, c=6422476) at problem05.c:25
+25          if(a>=b && a>=c)
+(gdb) s
+27              return a;
+(gdb) s
+36      }
+(gdb) s
+main () at problem05.c:13
+13          output(num1,num2,num3,largest);
+(gdb) s
+output (a=6422476, b=6422476, c=6422476, largest=6422476) at problem05.c:39
+39          printf("Thr largest of %d ,%d, and %d is %d \n",a,b,c,largest);
+(gdb) s
+Thr largest of 6422476 ,6422476, and 6422476 is 6422476
+40      }
+(gdb)
