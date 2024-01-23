@@ -1,12 +1,12 @@
 #include<stdio.h>
-int inut();
+int input();
 void compare(int a,int b,int c,int *largest );
 void output(int a,int b,int c,int largest);
 
 int main()
 {
     int num1,num2,num3,largest;
-    num1= input();
+    num1 = input();
     num2 = input();
     num3 = input();
     compare(num1,num2,num3,&largest);
