@@ -1,0 +1,60 @@
+PS C:\Users\riys\Desktop\c_activity_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\riys\Desktop\c_activity_sets\set01\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401471: file problem10.c, line 9.
+(gdb) r
+Starting program: C:\Users\riys\Desktop\c_activity_sets\set01/a.exe
+[New Thread 14224.0x2f24]
+[New Thread 14224.0x4768]
+
+Breakpoint 1, main () at problem10.c:9
+9           input_two_strings(str1,str2);
+(gdb) s
+input_two_strings (string1=0x61feb8 "\034"ütü_a", string2=0x61fe54 "ë_ßú"_a") at problem10.c:16
+16          printf("enter the first string\n");
+(gdb) s
+enter the first string
+17          scanf("%s",string1);
+(gdb) s
+s
+18          printf("enter the second string:\n");
+(gdb) s
+enter the second string:
+19          scanf("%s",string2);
+(gdb) s
+s
+20      }
+(gdb) s
+main () at problem10.c:10
+10          int result = stringcompare(str1,str2);
+(gdb) s
+stringcompare (string1=0x61feb8 "s", string2=0x61fe54 "s") at problem10.c:23
+23          int result = strcmp(string1,string2);
+(gdb) s
+24          return result;
+(gdb) s
+25      }
+(gdb) s
+main () at problem10.c:11
+11          output(str1,str2,result);
+(gdb) s
+output (string1=0x61feb8 "s", string2=0x61fe54 "s", result=0) at problem10.c:28
+28          if(result<0)
+(gdb) s
+32          else if(result>0)
+(gdb) s
+36          else if(result ==0)
+(gdb) s
+38              printf("%s is equal to  %s\n",string1,string2);
+(gdb) s
+s is equal to  s
+40      }(gdb) quit 
