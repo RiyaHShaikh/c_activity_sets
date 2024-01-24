@@ -1,0 +1,35 @@
+PS C:\Users\riys\Desktop\c_activity_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\riys\Desktop\c_activity_sets\set01\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401477: file problem08.c, line 9.
+(gdb) r
+Starting program: C:\Users\riys\Desktop\c_activity_sets\set01/a.exe
+[New Thread 4712.0x6d74]
+[New Thread 4712.0x3c38]
+
+Breakpoint 1, 0x00401477 in main () at problem08.c:9
+9       {
+(gdb) s
+11          n = input_array_size();
+(gdb) s
+input_array_size () at problem08.c:21
+21          printf("enter a value:");
+(gdb) s
+enter a value:22            scanf("%d",&x);
+(gdb) s
+s
+23          return x;
+(gdb) s
+24      }
+(gdb) s
+main () at problem08.c:12
+12          int a[n];
