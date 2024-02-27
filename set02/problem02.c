@@ -44,3 +44,4 @@ void output(int a, int b, int c, int isscalene) {
         printf("It is not a scalene triangle.\n");
     }
 }
+
